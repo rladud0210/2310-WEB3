@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var : 이전 세대에서 사용하던 변수 선언 방식 
+    
+        var 나이 = 30;
+        var 나이 = 50;
+
+        // var는 중복선언이 가능하다?
+        // 변수의 중복선언은 허용돼서는 안 된다
+
+        // 협업 시 동일한 변수명을 사용했을 때 아무런 오류 메세지 없이 실행된다.
+       
+        var 생년월일 = '1993-09-20';
+        
+        생년월일 = '2000-12-18';
+
+        // 바뀌면 안 되는 값(=상수)을 선언하는 기능이 없다.
+
+
+        // console.log(나이);
+        
+        // var 나이 = 30;
+        // var 나이 = 50;
+
+        // 나이가 선언되기 전에 나이가 선언돼서 x
+        // 위 처럼 작성된 코드는 호이스팅을 통해 다음과 같아진다.
+
+        // var 나이;
+
+        // console.log(나이)
+
+        // 나이 = 30;
+        // 나이 = 50;
+
+        // console.log(현재나이); 변수 선언 전 접근 불가 
+        
+        const 출생년도 = 1993 ; //상수
+        let 현재나이 ; //변수
+        console.log(현재나이);
+
+        // 출생년도=2000; 상수 변경 불가
+        // let 현재나이; 같은 이름으로 변수 선언 불가
+
+
+
+
+    </script>
+</body>
+</html>
