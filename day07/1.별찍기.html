@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 반복문 예제로 가장 많이 활용되는 별찍기 연습 -->
+
+    <script>
+        //&nbsp 띄어쓰기 코드
+        function star(){
+            document.write('&nbsp;*&nbsp;');
+        }
+
+        function enter(){
+            document.write('<br>');
+        }
+
+        function empty(){
+            document.write('&nbsp;&nbsp;&nbsp;')
+        }
+
+        function hr(){
+            document.wirte('<hr>')
+        }
+
+        
+        
+        
+        for (let i = 0; i < 5; i ++) {
+            for(let starCount = 0; starCount < 5; starCount ++) {
+                star();
+            }
+            enter();
+        }
+        
+        document.write('<hr>')
+       
+        for (let i = 0; i < 5; i ++) {
+            for(let starCount = 0; starCount < i + 1; starCount ++) {
+                star();
+            }
+            enter();
+        }
+
+        //i=0 i+1=1
+        //i=1 i+1=2
+        //i=2 i+1=3
+        //i=3 i+1=4
+        //i=4 i+1=5
+
+        document.write('<hr>')
+
+        for (let i = 0; i < 5; i ++) {
+            for(let starCount = 0; starCount < 5 - i; starCount ++) {
+                star();
+            }
+            enter();
+        }
+        
+
+        //i=0 5-i=5
+        //i=1 5-i=4
+        //i=2 5-i=3
+        //i=3 5-i=2
+        //i=4 5-i=1
+
+        document.write('<hr>')
+
+        for (let i = 0; i < 5; i ++) {
+            for(let emptyCount = 0; emptyCount < 4 - i; emptyCount ++) {
+                empty();
+            }
+            for (let starCount = 0; starCount < i + 1  ; starCount ++) { 
+                star();
+            }   
+            enter();
+        }
+
+        //i = 0, empty = 4(4-i) star = 1(i+1)
+        //i = 1, empty = 3(4-i) star = 2(i+1)
+        //i = 2, empty = 2(4-i) star = 3(i+1)
+        //i = 3, empty = 1(4-i) star = 4(i+1)
+        //i = 4, empty = 0(4-i) star = 5(i+1)
+
+
+
+        empty;empty;empty;empty;  star;
+        empty;empty;empty;   star;star;
+        empty;empty;    star;star;star;
+        empty;     star;star;star;star;
+              star;star;star;star;star;
+          
+
+
+    
+
+        
+        
+        
+    </script>
+</body>
+</html>
