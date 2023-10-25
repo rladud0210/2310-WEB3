@@ -1,4 +1,4 @@
-!<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,36 +6,53 @@
     <title>Document</title>
 </head>
 <body>
-    <!--업다운 게임을 만들어보세요-->
-    <!--숫자 범위는 1~100, 기회는 총 6번-->
-
+    <!-- 업다운게임을 만들어주세요 -->
+    <!-- 숫자 범위는 1~100, 기회는 총 6번 -->
     <script>
-       
-       const 범위 = 100;
-       const 기회 = 6;
-       
-       const 정답= Math.floor(Math.random() * 범위) + 1
-       
-       alert('업다운 게임이 시작됩니다!')
-       alert(`1부터 ${범위}까지의 숫자 중 정답이 있습니다.`)
-       alert(`기회는 ${기회}번`)
-       alert(정답)
-       
+        
+        const 범위 = 100;
+        const 기회 = 6;
 
-        for (let i = 0; i < 기회; i ++) {
-            const 입력 = Number (prompt(`숫자를 입력해주세요! (1 ~ ${범위}의 범위) 남은 기회 : ${기회 - i}`));
-            
-            if(입력 === 정답) {
-                alert('정답입니다!')
-                break;
-            } else if (입력 > 정답) {
-                alert('down')
-            } else {
-                alert('up')
+        const 정답 = Math.floor(Math.random()*범위)+1
+
+        alert('업다운 게임이 시작됩니다!')
+        alert(`1부터 ${범위}까지의 숫자중 정답이 있습니다.`)
+        alert(`기회는 ${기회}번!`)
+        alert(정답)
+
+
+
+        for(let i = 0 ; i <기회 ; i ++) {
+
+            //while문을 통한 예외처리 포함
+            let 입력;
+            while(true){
+                입력 = Number(prompt(`숫자를 입력해주세요! (1~${범위}) 남은기회 : ${ 기회 - i }`));
+
+                if(입력===NaN) {
+                    alert('숫자를 입력해주세요')
+                }else{
+                    if( 입력 >=1 && 입력 <=범위){
+                        break;
+                    }
+                    else {
+                        alert(`1부터 ${범위}까지의 숫자를 입력해주세요.`)
+                    }
+                }
             }
+
+            if(입력 === 정답) {
+                alert('정답입니다!');
+                break;
+            }else if(입력 > 정답) {
+                alert('down');
+            }else {
+                alert('up');
+            }
+
         }
-    
-       //NaN nat a number
+
+
     </script>
 </body>
 </html>
