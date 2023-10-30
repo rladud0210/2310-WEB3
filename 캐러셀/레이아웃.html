@@ -8,12 +8,12 @@
         * {
             margin: 0;
             padding: 0;
-        } 
-         
+        }
+
         li {
             list-style: none;
-        } 
-        
+        }
+
         .slider {
             width: 300px;
             height: 200px;
@@ -35,15 +35,19 @@
             flex-shrink: 0;
         }
 
+        /* 얘네는 복제의 영향을 받지 않음. 따라서 직접 넣어줘야 함 */
         .contents:nth-child(1){
-            background-color: pink;
+            background-color:pink
         }
+
         .contents:nth-child(2){
-            background-color: chocolate;
+            background-color:chocolate
         }
+
         .contents:nth-child(3){
-            background-color: steelblue;
+            background-color:steelblue
         }
+
 
         .controls {
             position: absolute;
@@ -60,17 +64,18 @@
             top: 50%;
             transform: translateY(-50%);
         }
-
+        
         .arrow-container > button {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
+            
         }
 
         .arrow-container > .prev {
             left: 0;
         }
-        
+
         .arrow-container > .next {
             right: 0;
         }
@@ -84,7 +89,7 @@
             color: white;
             border-radius: 4px;
         }
-        
+
         .slider-radio-button-container {
             position: absolute;
             left: 50%;
@@ -105,16 +110,16 @@
             background-color: #343434;
         }
     </style>
+
 </head>
 <body>
     <div class="slider">
         <ul class="contents-wrapper">
-            <li class="contents"></li>
-            <li class="contents"></li>
-            <li class="contents"></li>
+            <li class="contents" style="background-color: pink;"></li>
+            <li class="contents" style="background-color: coral;"></li>
+            <li class="contents" style="background-color: cornflowerblue;"></li>
             <li class="contents" style="background-color: aquamarine;"></li>
-            <li class="contents" style="background-color: aquamarine;"></li>
-            <!--개수가 바뀌어도 페이지 js 정상 작동-->
+            <li class="contents" style="background-color: cadetblue;"></li>
         </ul>
         <div class="controls">
             <div class="arrow-container">
@@ -130,12 +135,14 @@
                 <li class="slider-radio-button active"></li>
                 <li class="slider-radio-button"></li>
                 <li class="slider-radio-button"></li>
+                <li class="slider-radio-button"></li>
+                <li class="slider-radio-button"></li>
             </ul>
         </div>
     </div>
-    <!--<script src="움직이게만.js"></script>-->
-    <!-- ctrl / 주석 처리 -->
-    <!-- ctrl space 자동완성 -->
-    <script src="2.인덱스활용.js"></script>
+    <!-- <script src="1.움직이게만.js"></script> -->
+    <!-- <script src="2.인덱스활용.js"></script> -->
+    <!-- <script src="3.페이지.js"></script> -->
+    <script src="4.복사.js"></script>
 </body>
 </html>
