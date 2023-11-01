@@ -133,7 +133,7 @@ function 버튼색변경(버튼순서) {
     for(let i = 0 ; i < 하단버튼.length; i ++) {
         하단버튼[i].classList.remove('active');
     }
-
+    
         하단버튼[버튼순서-1].classList.add('active');
     
 }
