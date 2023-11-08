@@ -10,50 +10,48 @@ const 애니메이션속도 = 1000
 
 let index = 1;
 
-let moveAble = true;  
+let moveAble = true;
 
 슬라이드초기세팅();
 // 이전버튼
 prevButton.addEventListener('click', ()=>{
-    
     if(moveAble){
         moveAble = false;
         index--;
         위치적용(true);
         setTimeout(() => {
-            moveAble= true;
 
-            if(index === 한번에보는슬라이드 - 1){
+            moveAble = true;
+
+            if(index === 한번에보는슬라이드 - 1) {
                 index = 슬라이드갯수 + 한번에보는슬라이드 - 1;
                 위치적용(false);
             }
+
         }, 애니메이션속도);
     }
-    
-    
-    위치적용(true);
-   
 })
-// 다음버튼
+
+
+
 nextButton.addEventListener('click',()=>{
-    if(moveAble){
+
+     if(moveAble){
         moveAble = false;
         index++;
         위치적용(true);
         setTimeout(() => {
-            moveAble= true;
 
-            if(index > 슬라이드갯수 + 한번에보는슬라이드 - 1){
+            moveAble = true;
+
+            if(index > 슬라이드갯수+한번에보는슬라이드-1) {
                 index = 한번에보는슬라이드;
                 위치적용(false);
             }
+
         }, 애니메이션속도);
-    }  
-    
-    위치적용(true); 
-
+    }
 })
-
 
 function 위치적용(애니메이션여부) {
 
@@ -102,7 +100,7 @@ function 슬라이드초기세팅() {
     for(let i = 0 ; i < 하단버튼.length ; i ++) {
         하단버튼[i].addEventListener('click',()=>{
             index = i+한번에보는슬라이드;
-            위치적용(true); //true 입력하면 애니메이션 생김
+            위치적용(true);
         })
     }
 
